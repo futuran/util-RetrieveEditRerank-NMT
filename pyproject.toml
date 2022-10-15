@@ -9,6 +9,9 @@ packages = [{include = "util_retrieveeditrerank_nmt"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 subword-nmt = "^0.3.8"
+torch = {path = "/mnt/work/envs/torch-1.12.1+cu113-cp310-cp310-linux_x86_64.whl"}
+faiss-gpu = "^1.7.2"
+numpy = "^1.23.3"
 
 
 [build-system]
