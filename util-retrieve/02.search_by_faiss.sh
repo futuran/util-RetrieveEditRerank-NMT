@@ -14,7 +14,7 @@ MATCH_DIR=${DIR}.$MODEL/match_enh1m_to_jah2m
 mkdir -p $MATCH_DIR
 
 # 2 search by faiss
-for prefix in train_h100k #dev test train_h1m
+for prefix in dev test train_h1m train_h100k
 do
     if [ $prefix = 'test' ]; then
         PM='--include-perfect-match'

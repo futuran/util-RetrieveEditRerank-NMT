@@ -12,6 +12,9 @@ subword-nmt = "^0.3.8"
 torch = {path = "/mnt/work/envs/torch-1.12.1+cu113-cp310-cp310-linux_x86_64.whl"}
 faiss-gpu = "^1.7.2"
 numpy = "^1.23.3"
+editdistance = "^0.6.1"
+SetSimilaritySearch = "^1.0.1"
+spacy = "^3.4.3"
 
 
 [build-system]

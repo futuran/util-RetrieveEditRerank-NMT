@@ -11,12 +11,10 @@ if [ "$MODEL" = "" ]; then
 fi
 
 code=${DIR}/code.all
-NAME=enh1m_to_jah2m
 
 for k in 1 2 3 4 5 8 10 16 100; do
-    dir=${DIR}.$MODEL/merge_$NAME.top$k
-    for prefix in train_h100k test dev train_h1m
-    do
+    dir=${DIR}.$MODEL/merge_enh100k_to_enh100k.top$k
+    for prefix in test dev train_h100k ; do
         poetry run subword-nmt apply-bpe -c $code < $dir/${CORPUS}_$prefix.en.with_match.tkn > $dir/${CORPUS}_$prefix.en.tkn.bpe
         poetry run subword-nmt apply-bpe -c $code < $dir/${CORPUS}_$prefix.ja.with_match.tkn > $dir/${CORPUS}_$prefix.ja.tkn.bpe
     done
